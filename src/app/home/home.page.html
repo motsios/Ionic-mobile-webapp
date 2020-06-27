@@ -1,0 +1,23 @@
+   <ion-header>
+      <ion-toolbar>
+      <font size="2" face="verdana"><b>{{name}}'s Notes</b></font>
+            <ion-button fill="outline" name="start"  routerLink="/addnote">New Note
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+         
+            <ion-button  fill="outline" [href]="['/login']"  slot="end">Log Out
+              <ion-icon  name="arrow-up" ></ion-icon>
+              </ion-button>
+            </ion-toolbar>
+          </ion-header>
+ <ion-content>
+  <div *ngFor='let note of notes | async'>
+   <ion-list>
+    <ion-item  color="primary" size="small" [routerLink]="['/onenote/',note['id']]">
+      Update or Delete this Note </ion-item>
+       <h1><font size="5" face="verdana" style = "font-family:Times New Roman;" ><b>Title:</b>{{note.title}}</font></h1>
+        <h2><font size="4" style = "font-family:Candara;"><b>Details:</b> {{note.content}}</font></h2>
+        <h3 class="ion-text-center"><font size="3" style= "font-family:Geneva"><b>Created: {{note.createdAt.slice(0,10)}}</b></font></h3>
+    </ion-list>
+  </div>
+ </ion-content>

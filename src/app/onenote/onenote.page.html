@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Delete or Update Note</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button  fill="outline" routerLink="/home" >CLOSE
+        <ion-icon name="md-close"></ion-icon>
+      </ion-button>
+        </ion-buttons>
+        <ion-button   fill="outline" (click)="deleteProses()">
+          <ion-icon  name="trash"></ion-icon>
+          </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+    <ion-col size-md="12">
+            <ion-item>
+                <ion-input type="text"  [(ngModel)]="name" placeholder="Note Title"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-input type="text" [(ngModel)]="content" placeholder="Details"></ion-input>
+            </ion-item>
+                                      
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="number" placeholder="Importance"></ion-input>
+            </ion-item>
+
+       <ion-button expand="block width" color="primary"
+       (click)="updateProses()">SUBMIT
+       <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+      </ion-col>
+      </ion-row>
+      </ion-grid>
+</ion-content>

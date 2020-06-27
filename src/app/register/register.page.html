@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button routerLink="/login" slot="end" >
+      <ion-icon name="md-backspace"></ion-icon>
+      </ion-button>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="register(form)" method="post">
+    <ion-item>
+        <ion-input  ngModel name="first_name" placeholder="First Name (First Letter Capital)" 
+        pattern="^[A-Z][a-z]{1,15}"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input  ngModel name="last_name" placeholder="Last Name (First Letter Capital)" 
+      pattern="^[A-Z][a-z]{1,15}"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="email" ngModel name="email" placeholder="Email"
+     pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})"  ></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" ngModel name="password" placeholder="Password "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" ngModel name="rpassword" placeholder="Confirm Password"></ion-input>
+    </ion-item>
+  <img src="https://www.aftergraduation.co.in/wp-content/uploads/2017/03/Online-registration-for-CS-Foundation-dec-2017-course.jpg">
+    <ion-button type="submit"expand="block width"color="primary">Register</ion-button>
+  </form>
+</ion-content> 

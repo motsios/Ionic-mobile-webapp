@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+    <ion-button   fill="outline" (click)="exit()" slot="end" >Exit
+      <ion-icon name="exit"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+    <ion-item>
+      <ion-input ngModel type="email" name="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input ngModel type="password" name="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <img src="https://onlinembanogmat.com/wp-content/uploads/2019/05/note-taking-apps-featured.jpg">
+    <ion-button type="submit" expand="block width" color="primary"  >Login
+      <ion-icon name="walk"></ion-icon>
+    </ion-button>
+  </form>
+  <p class="ion-text-center">Don't have an account?</p>
+  <ion-button expand="block width" color="danger" routerLink="/register">Register
+  <ion-icon name="person-add"></ion-icon></ion-button>
+
+</ion-content>
